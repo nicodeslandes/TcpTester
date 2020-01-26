@@ -11,7 +11,7 @@ namespace TcpTester
             var commandRegistry = RegisterCommands();
             var context = new CommandContext(commandRegistry);
 
-            for (int i = 0; i < args.Length; i++)
+            for (int i = 0; i < args.Length;)
             {
                 var command = ParseCommandFromLaunchArguments(commandRegistry, args, ref i);
                 command(context);
